@@ -17,7 +17,7 @@ import {
   LayoutDashboard,
   FlaskConical,
   PencilRuler,
-  MessageSquareQuestion,
+  MessageCircleQuestion,
 } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from './ui/button';
@@ -30,7 +30,7 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
     { href: '/', label: 'Dashboard', icon: LayoutDashboard },
     { href: '/explainer', label: 'Topic Explainer', icon: FlaskConical },
     { href: '/quizzes', label: 'Quizzes', icon: PencilRuler },
-    { href: '/ask', label: 'Ask AI', icon: MessageSquareQuestion },
+    { href: '/ask', label: 'Ask AI', icon: MessageCircleQuestion },
   ];
 
   return (
