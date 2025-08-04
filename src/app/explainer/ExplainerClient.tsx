@@ -1,6 +1,6 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useFormStatus } from 'react';
 import { useEffect, useRef } from 'react';
 import { explainTopicAction } from '@/lib/actions';
 import { Button } from '@/components/ui/button';
@@ -26,7 +26,7 @@ function SubmitButton() {
 }
 
 export function ExplainerClient() {
-  const [state, formAction] = useFormState(explainTopicAction, initialState);
+  const [state, formAction] = useActionState(explainTopicAction, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 

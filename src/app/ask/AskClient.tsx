@@ -1,6 +1,6 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useFormStatus } from 'react';
 import { useEffect, useRef } from 'react';
 import { askAiAction } from '@/lib/actions';
 import { Button } from '@/components/ui/button';
@@ -26,7 +26,7 @@ function SubmitButton() {
 }
 
 export function AskClient() {
-  const [state, formAction] = useFormState(askAiAction, initialState);
+  const [state, formAction] = useActionState(askAiAction, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
